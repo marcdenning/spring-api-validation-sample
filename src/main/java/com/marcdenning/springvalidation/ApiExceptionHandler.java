@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 @RestControllerAdvice
 public class ApiExceptionHandler {
 
-    private static Logger logger = Logger.getLogger(ApiExceptionHandler.class.getName());
+    private static final Logger logger = Logger.getLogger(ApiExceptionHandler.class.getName());
 
     private final MessageSource messageSource;
 
@@ -29,7 +29,7 @@ public class ApiExceptionHandler {
             BindException ex,
             Locale locale
     ) {
-        final ObjectError error = ex.getBindingResult().getAllErrors().get(0);
+        final ObjectError error = ex.getBindingResult().getAllErrors().getFirst();
         final String message = messageSource.getMessage(error, locale);
 
         logger.log(Level.SEVERE, ex.getMessage(), ex);
