@@ -30,7 +30,7 @@ public class MyValidator implements Validator {
         final Person providedPerson = (Person) target;
 
         if (providedPerson.getName() != null && !providedPerson.getName().endsWith(suffix)) {
-            errors.rejectValue("name", String.format("Name must end with %s.", suffix));
+            errors.rejectValue("name", "MyValidator", new Object[] {suffix}, "Incorrect suffix.");
         }
     }
 }
