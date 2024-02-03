@@ -2,7 +2,9 @@
 
 > This project demonstrates some API validation patterns for Spring Boot Web Applications.
 
-Accompanies my blog post: [Validating Requests in Spring Boot](https://marcdenning.com/posts/2020/02/11/validating-requests-in-spring-boot/).
+This project accompanies my blog post: Validating Requests in Spring Boot 3.  
+It supersedes and builds on [Validating Requests in Spring Boot](https://marcdenning.com/posts/2020/02/11/validating-requests-in-spring-boot/) which was written for Spring Boot 2.
+If you are looking for a reference for validation in Spring Boot 2, please check out the [`release/spring-boot-2`](https://github.com/marcdenning/spring-api-validation-sample/tree/release/spring-boot-2) branch of this repo.
 
 ## Getting started
 
@@ -16,5 +18,7 @@ Build the Spring Boot application with the following command:
 ## Technology in use
 
 * Java 21
+* JUnit 5
 * Spring Boot 3
-* Gradle
+* Hibernate Validator 8
+* Gradle 8.5
